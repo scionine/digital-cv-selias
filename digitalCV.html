@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="cv.css" />
+    <title>Digital CV</title>
+  </head>
+  <body>
+    <header>
+      <!-- White text and elements on black background when possible -->
+      <br />
+      <img
+        id="portrait"
+        src="imgs\20240512_202701.jpg"
+        height="250"
+        alt="Simeon Elias Portrait"
+      />
+      <!-- Replace this with a better image later - this is just a placeholder -->
+      <h1>SIMEON ELIAS</h1>
+      <h2><small>DEVELOPER | DESIGNER | ILLUSTRATOR</small></h2>
+      <p id="locavail">Houston, Texas, United States | Open to Remote</p>
+      <nav>
+        <!-- <nav> is a container that would be used when making something like a nav bar -->
+        <!-- Indent text and links when possible. Also invert color of link icons -->
+        <a class="navlink" href="https://simeonelias.com">
+          <img
+            src="imgs\SimeonElias_v24 (20240726112636).png"
+            height="25"
+            alt="simeonelias.com"
+          />simeonelias.com
+        </a>
+
+        <!-- Makes an image serve as a link -->
+        <a class="navlink" href="https://linkedin.com/in/scionine"
+          ><img src="imgs\61109.png" height="18" alt="Linkedin" />LinkedIn
+        </a>
+        <!-- <td>
+              <a href="mailto:simeonelias.iii@gmail.com"><img src="imgs\644496_email_512x512.png" height="23" alt="simeonelias.iii@gmail.com">simeonelias.iii@gmail.com
+              <a>
+            </td> -->
+        <a class="navlink" href="https://github.com/scionine"
+          ><img
+            src="imgs\Octicons-mark-github.svg.png"
+            height="21"
+            alt="GitHub"
+          />Github
+        </a>
+      </nav>
+      <br />
+    </header>
+    <br />
+    <img id="monst" src="imgs\IW_002.png" />
+    <br />
+
+    <main>
+      <section id="container">
+        <h2>SUMMARY</h2>
+        <p>
+          I'm a front-end developer and designer with a passion for blending
+          technical skill and creative vision to bring innovative ideas to life.
+        </p>
+      </section>
+      <hr />
+      <section id="container" id="education">
+        <h2>EDUCATION</h2>
+        <table id="springboard">
+          <thead>
+            <tr>
+              <th>
+                <a
+                  href="https://www.springboard.com/coursoftware-engineering-career-track/"
+                  >Springboard</a
+                >
+              </th>
+              <th>Jan 2025 - May 2025</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan>Software Developement Career</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br />
+
+        <table id="college">
+          <thead>
+            <tr>
+              <th id="th-c">College for Creative Studies</th>
+              <th>Sept 2020 - May 2024</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan>Game Design <br /><i>Bachelor of Fine Arts</i></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <br />
+
+      <hr />
+
+      <section>
+        <h2>PROJECTS</h2>
+        <h3><a href="https://simeonelias.com">Revenant</a></h3>
+        <!-- placeholder link -->
+        <p>
+          An interactive 3D portfolio website combining cyberpunk elements with
+          a dark fantasy theme. Users hover over images presented in a gallery,
+          spawning information about the subject in said images. This project
+          provides an immersive experience for lovers of weird creatures and
+          lore. Built using React for front-end and Node.js for back-end.
+        </p>
+        <img
+          id="hesper"
+          src="imgs\Eclipse_SimeonElias_Dark.gif"
+          height="125"
+          alt="Revenant Wheel"
+        />
+        <!-- Can't believe the gif worked with this lol -->
+        <h3><a href="https://simeonelias.com">Hesper</a></h3>
+        <p>
+          A real-time, secure chat application built with React.js for front-end
+          and Firebase for back-end.
+        </p>
+        <img src="imgs\SimeonElias_v24_icon_v2_black.png" height="106" />
+        <!-- All images and gifs by me -->
+      </section>
+
+      <hr />
+
+      <section class="container" id="techskills">
+        <h2>TECHNICAL SKILLS</h2>
+        <table>
+          <thead>
+            <tr>
+              <th id="th-l">Languages</th>
+              <th id="th-f">Frameworks</th>
+              <th id="th-s">Software</th>
+              <!-- <th>Team Collaboration</th> -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HTML</td>
+              <td>Node.js</td>
+              <td>Adobe Creative Cloud</td>
+              <!-- <td>Miro</td> -->
+            </tr>
+            <tr>
+              <td>CSS</td>
+              <td>React.js</td>
+              <td>ZBrush</td>
+              <!-- <td>Slack</td> -->
+            </tr>
+            <tr>
+              <td colspan>JavaScript</td>
+              <td>Three.js</td>
+              <td>Blender</td>
+            </tr>
+            <tr>
+              <td colspan>Python</td>
+              <td></td>
+              <td>Maya</td>
+            </tr>
+            <tr>
+              <td colspan>C++</td>
+              <td></td>
+              <td>Unreal Engine</td>
+            </tr>
+            <tr>
+              <td colspan></td>
+              <td></td>
+              <td>Marmoset Toolbag</td>
+            </tr>
+            <tr>
+              <td colspan></td>
+              <td></td>
+              <td>Keyshot</td>
+            </tr>
+            <tr>
+              <td colspan></td>
+              <td></td>
+              <td>VS Code</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <br />
+
+      <!-- <hr /> -->
+
+      <section id="contform">
+        <!-- Contact form with various fields for info -->
+        <form action="#" method="post" enctype="multipart/form-data">
+          <h2>CONTACT</h2>
+          <label>
+            <!-- First Name: -->
+            <input
+              name="name"
+              type="text"
+              placeholder="First Name"
+              minlenght="2"
+              maxlenght="10"
+              required
+            />
+          </label>
+          <br />
+          <label>
+            <!-- Last Name: -->
+            <input
+              name="name"
+              type="text"
+              placeholder="Last Name"
+              minlenght="2"
+              maxlenght="10"
+              required
+            />
+          </label>
+
+          <br />
+
+          <label>
+            <!-- Label using nesting: -->
+            <!-- Email: -->
+            <input name="email" type="email" placeholder="Email" required />
+          </label>
+          <br />
+          <label>
+            <input type="checkbox" name="tos-agree" /> Extra dash of awesomeness
+          </label>
+          <br />
+          <br />
+          <!-- Area for users to type questions, commments, concerns, etc. -->
+          <select id="contact" name="reasons" id="reason-select">
+            <option value="">Reason for Contact</option>
+            <option value="job-offer">Job Offer</option>
+            <option value="inquiry">Inquiry</option>
+            <option value="other">Other</option>
+          </select>
+          <!-- Default text area
+        <textarea name="essay"></textarea> -->
+          <br />
+          <!-- You can use the rows and cols attributes with a <textarea> element to set the initial number of rows and columns. -->
+          <textarea
+            name=""
+            id=""
+            placeholder="Type Your Message Here"
+            required
+          ></textarea>
+
+          <!-- Radio buttons -->
+          <!-- <p>Select Shirt Size</p>
+        <input type="radio" name="shirt-size" value="XS" /> XS <br />
+        <input type="radio" name="shirt-size" value="S" /> S <br />
+        <input type="radio" name="shirt-size" value="M" /> M <br />
+        <input type="radio" name="shirt-size" value="L" /> L <br /> -->
+          <br />
+          <!-- You need to have this if you every have a file input in any form:
+        enctype="multipart/form-data" -->
+          <!-- <label>
+            This won't actually work since you need various other things, but go ahead and pick a file!
+            <input type="file" />
+          </label> -->
+          <br />
+          <!-- Submit button -->
+          <button id="submit" type="submit">SEND</button>
+          <!-- <input type="submit"> -->
+        </form>
+      </section>
+      <br />
+    </main>
+    <br />
+    <br />
+    <br />
+
+    <footer>
+      <img id="logo" src="imgs\SimeonElias_v24 (20240726112636).png" />
+      <p id="copyright">© 2025 by SIMEON ELIAS. All Rights Reserved.</p>
+      <br />
+    </footer>
+
+    <br />
+    <br />
+    <br />
+    <!-- REFERENCES
+            Making an image into a link:
+            MDN Web Docs - https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links 
+            
+            Setting background color:
+            Stack Overflow - https://stackoverflow.com/questions/64051702/how-can-i-set-an-elements-background-color-in-an-html-file-->
+  </body>
+</html>

@@ -1,0 +1,296 @@
+/*DESIGN IDEA:
+
+The idea is for the CV to emulate the unravelling of a "banner" or scroll with a minimalist, modern style. */
+* {
+  box-sizing: border-box;
+  /*Applies border-box to all elements using the "universal selector" (*). Using border-box makes things easier by making your height and width values just as you specified without having to do any extra math regarding borders. padding, and content box.*/
+}
+
+html {
+  font-family: Karla, Arial, Helvetica, sans-serif;
+  font-size: 2vw;
+  font-size: 2vh;
+  /*Makes everything parented to it responsive to viewport width*/
+}
+body {
+  background-color: hsl(0, 0%, 0%);
+  /* Makes background black */
+  /* background: linear-gradient(black 25%, rgb(56, 56, 56)); */
+  /* Creates linear page gradient */
+  font-size: 0.9rem;
+  width: 65%;
+  min-width: 500px;
+  margin: 0 auto;
+  /* padding: 5rem; */
+}
+header {
+  text-align: center;
+  font-size: 0.9rem;
+}
+section {
+  width: 55%;
+  min-width: 300px;
+  margin: 0 auto;
+  /* margin: 0px 50px 0px 50px; */
+  /*Top, Right, Bottom, Left*/
+  padding: 40px 0px 40px 0px;
+}
+table {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  /*Centers table vertically on webpage*/
+}
+img {
+  text-align: center;
+}
+h1 {
+  font-family: Josefin Sans, Arial, Helvetica, sans-serif;
+  color: rgb(255, 255, 255);
+  letter-spacing: 20px;
+  text-shadow: 15px 9px 7px rgb(52, 52, 52);
+  /* font-size: 3vw; */
+  /* Drop-shadow or glow effect */
+  /* X-axis, Y-axis, Blur radius */
+}
+h2 {
+  font-family: Josefin Sans, Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  letter-spacing: 5px;
+  /* font-size: 1.5vw; */
+  font-size: 1.25rem;
+}
+h2:not(header h2) {
+  padding-bottom: 20px;
+  /*Adds padding to all h2 that aren't a child of <header> using a pseudo-class*/
+}
+h3 {
+  font-size: 1.12rem;
+}
+hr {
+  width: 55%;
+  min-width: 300px;
+  margin: 0 auto;
+}
+#monst {
+  max-width: 75%;
+  height: auto;
+  filter: brightness(75%);
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+  font-size: 0.5rem;
+  /* Make .monst conform to viewport width 
+  REFERENCE:
+  https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit */
+}
+#portrait {
+  /* Made image into its own category in order to isolate this style to one image instead of all images in my HTML doc */
+  border-radius: 50%;
+  /* border-radius property can be used to crop an image - setting the radius to 50% applies a circular crop.*/
+  max-width: 13rem;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding: 2rem 0rem 1rem 0rem;
+  /*Top, Right, Bottom, Left*/
+
+  /*REFERENCE:
+  https://www.w3schools.com/howto/howto_css_rounded_images.asp; 
+  
+  https://stackoverflow.com/questions/54825734/border-radius-from-image-to-one-single-item*/
+}
+#hesper {
+  border-radius: 50%;
+  /*Gives round border to Hesper gif*/
+}
+#locavail {
+  font-size: 0.75rem;
+  color: rgb(95, 95, 95);
+}
+a {
+  color: rgb(255, 255, 255);
+  /* Creates space between links */
+  text-decoration: none;
+  /*Removes underline*/
+}
+a:not(nav a) {
+  border-left: 2px solid #999;
+  padding-left: 6px;
+  /*Adds small border accent to left of links for aesthetics, exluding the social links iin nav bar*/
+}
+a:hover {
+  color: rgb(0, 110, 255);
+  border-color: rgb(0, 110, 255);
+  /* Turns link a different color when hovered over. This is called a pseudo-class */
+}
+th a {
+  color: rgb(255, 255, 255);
+  border-left: 2px solid #999;
+  padding-left: 6px;
+}
+nav {
+  padding: 0.7rem;
+}
+.navlink {
+  display: inline-flex; /*Lines up links side by side*/
+  margin-right: 20px; /*Adds spacing between individual links*/
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+.navlink img {
+  width: 0.9rem; /* Adjust icon size according to link text*/
+  height: auto;
+  margin-right: 7px; /* Adds spacing between icon and text */
+}
+#logo {
+  max-width: 5rem;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+  filter: brightness(25%);
+}
+img {
+  margin: 0 auto;
+  display: block;
+}
+hr {
+  border-color: hsl(0, 0%, 0%);
+  /* You have to use border-color to change the color of the breaks */
+}
+h2,
+h3,
+h4,
+label,
+table,
+p {
+  color: rgb(190, 190, 190);
+  text-align: center;
+  /* Apparently just listing all the elements that use the same style, in this case the color style, works the same as styling individually (saves code). */
+}
+#contform {
+  border: 1px solid #666;
+  padding: 10px;
+  border-radius: 20px;
+}
+input:required {
+  color: #999;
+  margin-left: 5px;
+  /* For adding a red astrisk to the required fields - haven't quite figured out how to get it to work, yet.   */
+}
+input,
+textarea {
+  background-color: #0c0c0c;
+  color: #666;
+  margin-bottom: 13px;
+  border-style: none;
+  border-left: 3px solid #999;
+  font-size: 0.9rem;
+  padding: 9px;
+  /*input:not([type="file"])...pseudo-class to exclude the file type input*/
+}
+input:hover,
+input:focus {
+  box-shadow: 0px 0px 5px rgb(0, 110, 255);
+  /* X-axis, Y-axis, Blur radius */
+  /*Adjusts shadow color and spread*/
+  outline: none; /*Removes default focus outline*/
+  border-left: 5px solid rgb(0, 110, 255);
+}
+textarea:hover,
+textarea:focus {
+  box-shadow: 0px 0px 5px rgb(0, 110, 255);
+  /* X-axis, Y-axis, Blur radius */
+  /*Adjusts shadow color and spread*/
+  outline: none; /*Removes default focus outline*/
+  border-left: 5px solid rgb(0, 110, 255);
+}
+input:not([type="checkbox"]) {
+  width: 275px;
+}
+/* input:hover {
+  border-left: 4px solid #fff;
+  border-bottom: none;
+} */
+textarea {
+  min-width: 275px;
+  min-height: 150px;
+}
+#contact {
+  font-size: 0.9rem;
+  width: 250px;
+  /* This is for the "Reason for Contact" drop-down select element */
+}
+#submit {
+  font-size: 0.9rem;
+}
+#copyright {
+  text-align: center;
+  font-size: 0.75rem;
+  color: rgb(95, 95, 95);
+}
+th a:not(#techskills th),
+td:not(#techskills td) {
+  padding-right: 80px;
+}
+th:not(#education th),
+td:not(#education td) {
+  padding-right: 50px;
+}
+th,
+td {
+  text-align: left;
+  min-width: 100px;
+  white-space: nowrap;
+}
+#springboard td {
+  padding-bottom: 40px;
+  /*Padding for bottom row of Springboard table to provide spacing before the the next table*/
+}
+td:not(#techskills td) {
+  padding-top: 7px;
+  /* padding-bottom: 40px; */
+  /*Padding for <td> elements in the Education section*/
+}
+th[id^="th-c"] {
+  padding-right: 20px;
+  /*Padding for the <th> elements for college in Education section*/
+}
+th[id^="th-c"],
+th[id^="th-l"],
+th[id^="th-f"],
+th[id^="th-s"] {
+  border-left: 2px solid #999;
+  padding-left: 6px;
+}
+th {
+  color: rgb(225, 225, 225);
+}
+td:not(#education td) {
+  padding-top: 15px;
+}
+button {
+  background-color: #000;
+  color: rgb(190, 190, 190);
+  padding: 9px;
+  border-style: none;
+  border-radius: 15px;
+  border: 1px solid #666;
+  min-width: 90px;
+  min-height: 45px;
+}
+button:hover,
+button:focus {
+  color: rgb(0, 0, 0);
+  background-color: rgb(0, 110, 255);
+  border-style: none;
+  font-weight: bold;
+}
+select {
+  background-color: #000;
+  color: hsl(0, 0%, 87%);
+  border-radius: 10px;
+  padding: 8px;
+  margin-bottom: 8px;
+}
