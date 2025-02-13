@@ -1,6 +1,3 @@
-/*DESIGN IDEA:
-
-The idea is for the CV to emulate the unravelling of a "banner" or scroll with a minimalist, modern style. */
 * {
   box-sizing: border-box;
   /*Applies border-box to all elements using the "universal selector" (*). Using border-box makes things easier by making your height and width values just as you specified without having to do any extra math regarding borders. padding, and content box.*/
@@ -11,6 +8,8 @@ html {
   font-size: 2vw;
   font-size: 2vh;
   /*Makes everything parented to it responsive to viewport width*/
+  scroll-snap-type: y mandatory;
+  /*This allows the screen to snap to each section when scrolling*/
 }
 body {
   background-color: hsl(0, 0%, 0%);
@@ -30,10 +29,13 @@ header {
 section {
   width: 55%;
   min-width: 300px;
+  max-width: 1080px;
   margin: 0 auto;
   /* margin: 0px 50px 0px 50px; */
   /*Top, Right, Bottom, Left*/
   padding: 40px 0px 40px 0px;
+  scroll-snap-align: start;
+  /*This allows the screen to snap to each section when scrolling in addition to using "scroll-snap-type: y mandatory within the html element*/
 }
 table {
   margin-right: auto;
