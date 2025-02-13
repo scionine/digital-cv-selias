@@ -132,13 +132,17 @@ th a {
   padding-left: 6px;
 }
 nav {
+  display: flex;
   padding: 0.7rem;
+  justify-content: center;
+  align-items: center;
 }
 .navlink {
   display: inline-flex; /*Lines up links side by side*/
-  margin-right: 20px; /*Adds spacing between individual links*/
+  margin-right: 2em; /*Adds spacing between individual links*/
   text-decoration: none;
   font-size: 0.8rem;
+  align-items: center;
 }
 .navlink img {
   width: 0.9rem; /* Adjust icon size according to link text*/
