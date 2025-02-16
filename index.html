@@ -20,99 +20,112 @@
     <title>Digital CV</title>
   </head>
   <body>
-    <section>
-      <header>
-        <!-- White text and elements on black background when possible -->
-        <br />
-        <img
-          id="portrait"
-          src="imgs\20240512_202701.jpg"
-          height="250"
-          alt="Simeon Elias Portrait"
-        />
-        <!-- Replace this with a better image later - this is just a placeholder -->
-        <h1>SIMEON ELIAS</h1>
-        <h2><small>DEVELOPER | DESIGNER | ILLUSTRATOR</small></h2>
-        <p id="locavail">Houston, Texas, United States | Open to Remote</p>
-        <nav>
-          <!-- <nav> is a container that would be used when making something like a nav bar -->
-          <!-- Indent text and links when possible. Also invert color of link icons -->
-          <a class="navlink" href="https://simeonelias.com">
-            <img
-              src="imgs\SimeonElias_v24 (20240726112636).png"
-              height="25"
-              alt="simeonelias.com"
-            />simeonelias.com
-          </a>
+    <header>
+      <!-- Introduction -->
+      <section>
+        <div class="portrait-container" alt="Simeon Elias Portrait"></div>
 
-          <!-- Makes an image serve as a link -->
-          <a class="navlink" href="https://linkedin.com/in/scionine"
-            ><img src="imgs\61109.png" height="18" alt="Linkedin" />LinkedIn
-          </a>
-          <!-- <td>
+        <div class="name-container">
+          <h1>SIMEON ELIAS</h1>
+          <h2>
+            <small>DEVELOPER | DESIGNER | ILLUSTRATOR</small>
+          </h2>
+        </div>
+
+        <div class="information-container">
+          <p>Houston, Texas, United States | Open to Remote</p>
+          <nav>
+            <a class="navlink" href="https://simeonelias.com">
+              <img
+                class="icon"
+                src="imgs\SimeonElias_v24_icon_v2_black.png"
+                height="25"
+                alt="simeonelias.com"
+              />simeonelias.com
+            </a>
+            <!-- Makes an image serve as a link -->
+            <a class="navlink" href="https://linkedin.com/in/scionine"
+              ><img
+                class="icon"
+                src="imgs\61109.png"
+                height="18"
+                alt="Linkedin"
+              />LinkedIn
+            </a>
+            <!-- <td>
               <a href="mailto:simeonelias.iii@gmail.com"><img src="imgs\644496_email_512x512.png" height="23" alt="simeonelias.iii@gmail.com">simeonelias.iii@gmail.com
               <a>
             </td> -->
-          <a class="navlink" href="https://github.com/scionine"
-            ><img
-              src="imgs\Octicons-mark-github.svg.png"
-              height="21"
-              alt="GitHub"
-            />Github
-          </a>
-        </nav>
-        <br />
-      </header>
-    </section>
+            <a class="navlink" href="https://github.com/scionine"
+              ><img
+                class="icon"
+                src="imgs\Octicons-mark-github.svg.png"
+                height="21"
+                alt="GitHub"
+              />Github
+            </a>
+            <!-- <nav> is a container that would be used when making something like a nav bar -->
+            <!-- Indent text and links when possible. Also invert color of link icons -->
+          </nav>
+        </div>
+      </section>
+    </header>
+
     <br />
-    <img id="monst" src="imgs\IW_002.png" />
+
+    <div class="horiz-container"></div>
+
     <br />
 
     <main>
-      <section id="container">
+      <section>
         <h2>SUMMARY</h2>
         <p>
           I'm a front-end developer and designer with a passion for blending
           technical skill and creative vision to bring innovative ideas to life.
         </p>
       </section>
+
       <hr />
-      <section id="container" id="education">
+
+      <section class="education">
         <h2>EDUCATION</h2>
-        <table id="springboard">
-          <thead>
-            <tr>
-              <th>
-                <a
-                  href="https://www.springboard.com/coursoftware-engineering-career-track/"
-                  >Springboard</a
-                >
-              </th>
-              <th>Jan 2025 - May 2025</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td colspan>Software Development Career</td>
-            </tr>
-          </tbody>
-        </table>
 
-        <br />
+        <div class="container">
+          <table>
+            <thead>
+              <tr colspan>
+                <th>
+                  <a
+                    href="https://www.springboard.com/coursoftware-engineering-career-track/"
+                    >Springboard</a
+                  >
+                </th>
+                <th></th>
+                <th>Jan 2025 - May 2025</th>
+              </tr>
+            </thead>
 
-        <table id="college">
-          <thead>
-            <tr>
-              <th id="th-c">College for Creative Studies</th>
-              <th>Sept 2020 - May 2024</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td colspan>Game Design <br /><i>Bachelor of Fine Arts</i></td>
-            </tr>
-          </tbody>
-        </table>
+            <tbody>
+              <tr>
+                <td colspan>Software Development Career</td>
+              </tr>
+              <thead>
+                <tr colspan>
+                  <th id="ccs">College for Creative Studies</th>
+                  <th></th>
+                  <th>Sept 2020 - May 2024</th>
+                </tr>
+              </thead>
+            </tbody>
+
+            <tbody>
+              <tr>
+                <td colspan>Game Design <br /><i>Bachelor of Fine Arts</i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
       <br />
 
@@ -147,66 +160,65 @@
 
       <hr />
 
-      <section class="container" id="techskills">
+      <section class="techskills">
         <h2>TECHNICAL SKILLS</h2>
-        <table>
-          <thead>
-            <tr>
-              <th id="th-l">Languages</th>
-              <th id="th-f">Frameworks</th>
-              <th id="th-s">Software</th>
-              <!-- <th>Team Collaboration</th> -->
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>HTML</td>
-              <td>Node.js</td>
-              <td>Adobe Creative Cloud</td>
-              <!-- <td>Miro</td> -->
-            </tr>
-            <tr>
-              <td>CSS</td>
-              <td>React.js</td>
-              <td>ZBrush</td>
-              <!-- <td>Slack</td> -->
-            </tr>
-            <tr>
-              <td colspan>JavaScript</td>
-              <td>Three.js</td>
-              <td>Blender</td>
-            </tr>
-            <tr>
-              <td colspan>Python</td>
-              <td></td>
-              <td>Maya</td>
-            </tr>
-            <tr>
-              <td colspan>C++</td>
-              <td></td>
-              <td>Unreal Engine</td>
-            </tr>
-            <tr>
-              <td colspan></td>
-              <td></td>
-              <td>Marmoset Toolbag</td>
-            </tr>
-            <tr>
-              <td colspan></td>
-              <td></td>
-              <td>Keyshot</td>
-            </tr>
-            <tr>
-              <td colspan></td>
-              <td></td>
-              <td>VS Code</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-      <br />
 
-      <!-- <hr /> -->
+        <div class="container">
+          <table>
+            <thead>
+              <tr>
+                <th>Languages</th>
+                <th>Frameworks</th>
+                <th>Software</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr colspan>
+                <td>HTML</td>
+                <td>Node.js</td>
+                <td>Adobe Creative Cloud</td>
+              </tr>
+              <tr colspan>
+                <td>CSS</td>
+                <td>React.js</td>
+                <td>ZBrush</td>
+              </tr>
+              <tr colspan>
+                <td>JavaScript</td>
+                <td>Three.js</td>
+                <td>Blender</td>
+              </tr>
+              <tr colspan>
+                <td>Python</td>
+                <td></td>
+                <td>Maya</td>
+              </tr>
+              <tr colspan>
+                <td>C++</td>
+                <td></td>
+                <td>Unreal Engine</td>
+              </tr>
+              <tr colspan>
+                <td></td>
+                <td></td>
+                <td>Marmoset Toolbag</td>
+              </tr>
+              <tr colspan>
+                <td></td>
+                <td></td>
+                <td>Keyshot</td>
+              </tr>
+              <tr colspan>
+                <td></td>
+                <td></td>
+                <td>VS Code</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <br />
 
       <section id="contform">
         <!-- Contact form with various fields for info -->
