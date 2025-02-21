@@ -16,19 +16,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="cv.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Digital CV</title>
   </head>
   <body>
     <header>
       <!-- Introduction -->
       <section>
-        <div class="portrait-container" alt="Simeon Elias Portrait"></div>
+        <div>
+          <img
+            class="portrait-container"
+            src="imgs\proPortrait.jpg"
+            alt="Profile Picture"
+          />
+        </div>
 
         <div class="name-container">
           <h1>SIMEON ELIAS</h1>
           <h2>
-            <small>DEVELOPER | DESIGNER | ILLUSTRATOR</small>
+            <small>FRONT-END DEVELOPER | DESIGNER</small>
           </h2>
         </div>
 
@@ -73,7 +79,7 @@
 
     <br />
 
-    <div class="horiz-container"></div>
+    <div><img class="horiz-container" src="imgs\IW_002.png" /></div>
 
     <br />
 
@@ -95,7 +101,7 @@
           <table>
             <thead>
               <tr colspan>
-                <th>
+                <th id="springboard">
                   <a
                     href="https://www.springboard.com/coursoftware-engineering-career-track/"
                     >Springboard</a
@@ -110,14 +116,15 @@
               <tr>
                 <td colspan>Software Development Career</td>
               </tr>
-              <thead>
-                <tr colspan>
-                  <th id="ccs">College for Creative Studies</th>
-                  <th></th>
-                  <th>Sept 2020 - May 2024</th>
-                </tr>
-              </thead>
             </tbody>
+            <tr height="20"></tr>
+            <thead>
+              <tr colspan>
+                <th id="ccs">College for Creative Studies</th>
+                <th></th>
+                <th>Sept 2020 - May 2024</th>
+              </tr>
+            </thead>
 
             <tbody>
               <tr>
@@ -142,12 +149,8 @@
           provides an immersive experience for lovers of weird creatures and
           lore. Built using React for front-end and Node.js for back-end.
         </p>
-        <img
-          id="hesper"
-          src="imgs\Eclipse_SimeonElias_Dark.gif"
-          height="125"
-          alt="Revenant Wheel"
-        />
+        <img id="hesper" src="imgs\Manifesto_SimeonElias.gif"" height="125"
+        alt="Revenant Wheel" />
         <!-- Can't believe the gif worked with this lol -->
         <h3><a href="https://simeonelias.com">Hesper</a></h3>
         <p>
