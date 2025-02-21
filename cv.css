@@ -41,7 +41,7 @@ h1 {
   letter-spacing: 20px;
   text-shadow: 15px 9px 7px rgb(52, 52, 52);
   /* Drop-shadow or glow effect */
-  font-size: 3dvw;
+  font-size: 3rem;
   /* X-axis, Y-axis, Blur radius */
   margin: 0;
 }
@@ -51,7 +51,7 @@ h2 {
   font-weight: 300;
   letter-spacing: 5px;
   padding: none;
-  font-size: 1.5dvw;
+  font-size: 1.5rem;
   align-items: center;
   justify-content: center;
 }
@@ -148,12 +148,27 @@ section {
 }
 
 /* Tables */
+.container {
+  display: flex;
+  justify-content: center; /* Centers table horizontally */
+  align-items: center; /* Centers table vertically if needed */
+  width: 100%;
+}
+
 .container table {
   border-spacing: 10px; /* Adds 10px vertical space between rows */
   border-collapse: separate; /* Ensures spacing works */
   table-layout: auto; /* Ensures table cells don't stretch beyond container */
+  margin: 0 auto;
   max-width: 100%;
-  transform: scale(0.8);
+  display: block;
+}
+
+.education,
+.techskills {
+  display: block;
+  justify-content: center;
+  width: 100%;
 }
 
 th,
@@ -186,10 +201,8 @@ th a {
   padding-left: 6px;
 }
 
-th:not(.education th),
-td:not(.education td) {
-  padding-right: 50px;
-  /*Makes spacing between the columns for the tech skills section*/
+.techskills table {
+  border-spacing: 30px 9px;
 }
 
 .techskills th {
@@ -203,6 +216,10 @@ img {
   display: block;
   overflow-clip-margin: content-box;
   overflow: clip;
+}
+
+section > img {
+  margin-bottom: 20px;
 }
 
 .horiz-container {
@@ -269,6 +286,7 @@ textarea {
   border-left: 3px solid #999;
   font-size: 0.9rem;
   padding: 9px;
+  transition: border-left 0.3s ease, box-shadow 0.3s ease;
 }
 
 input:not([type="checkbox"]) {
@@ -306,6 +324,7 @@ button {
   border: 1px solid #666;
   min-width: 90px;
   min-height: 45px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button:hover,
@@ -320,6 +339,7 @@ button:focus {
 a {
   color: rgb(255, 255, 255);
   text-decoration: none;
+  transition: font-size 0.3s ease, color 0.3s;
 }
 
 a:not(nav a, .information-container a) {
@@ -330,6 +350,7 @@ a:not(nav a, .information-container a) {
 a:not(nav a, .information-container a):hover {
   color: rgb(0, 110, 255);
   border-left-color: rgb(0, 110, 255);
+  font-size: calc(1rem + 2px); /* Increases size by 3px */
 }
 
 nav {
@@ -350,6 +371,7 @@ nav {
   align-items: center;
   justify-content: center;
   padding: 0.7rem;
+  transition: color 0.3s;
 }
 
 .navlink:hover {
@@ -377,34 +399,78 @@ hr {
 }
 
 /* Styles for Mobile Screens */
-@media (max-width: 480) {
-  header {
-    height: auto; /* Allow the header to adjust height as needed */
-    padding: 2dvh; /* Keep some padding to maintain spacing */
+@media (max-width: 500px) {
+  body {
+    width: 100%; /* Use full width */
+    font-size: 0.85rem; /* Slightly smaller text for readability */
+    padding: 0.5rem; /* Reduce padding */
   }
 
-  header h1 {
-    font-size: 5dvw; /* Responsive font size for h1 */
-  }
-
-  header h2 {
-    font-size: 1.5dvw; /* Responsive font size for h2 */
-  }
-
-  #locavail {
-    font-size: 1rem; /* Keeps the font size for location/availability consistent */
+  .name-container {
+    transform: scale(0.8);
   }
 
   section {
-    padding: 4dvw 1.5dvw;
+    max-width: 100%; /* Utilize more space */
+    padding: 1.5dvw; /* Reduce padding */
+    font-size: 0.75rem;
   }
 
-  table {
-    font-size: 1rem;
+  h1 {
+    font-size: 1.75rem; /* Responsive font size */
+    letter-spacing: 5px; /* Less spacing */
   }
 
-  th,
-  td {
-    padding: 0.75rem;
+  .name-container > h2 {
+    font-size: 0.75rem;
+  }
+
+  h2 {
+    font-size: 1rem; /* Adjust heading size */
+  }
+
+  .name-container {
+    transform: scale(1); /* Reset scaling */
+  }
+
+  .education,
+  .techskills {
+    transform: scale(0.7);
+  }
+
+  .information-container {
+    font-size: 0.7rem; /* Reduce font size */
+  }
+
+  .portrait-container {
+    width: 8rem; /* Reduce image size further */
+  }
+
+  input,
+  textarea {
+    font-size: 0.8rem; /* Adjust input text */
+  }
+
+  button {
+    min-width: 65px;
+    min-height: 38px;
+    font-size: 0.8rem;
+  }
+
+  nav {
+    flex-direction: column; /* Stack links */
+    gap: 3px;
+  }
+
+  .navlink {
+    padding: 0.4rem;
+  }
+
+  .navlink img {
+    width: 0.85rem; /* Reduce icon size */
+  }
+
+  hr {
+    max-width: 200px;
   }
 }
